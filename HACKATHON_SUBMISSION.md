@@ -56,9 +56,9 @@
 
 ## Team Information
 
-- **Team Name:** [Waterloo Blockchain Sweat]
-- **Team Members:** [Cole Dermott - Head of Finance @ Waterloo Blockchain]
-- **Contact Email:** [cdermott@uwaterloo.ca]
+- **Team Name:** Waterloo Blockchain Sweat
+- **Team Members:** Cole Dermott - Head of Finance @ Waterloo Blockchain
+- **Contact Email:** cdermott@uwaterloo.ca
 
 ## Additional Information
 
