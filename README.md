@@ -29,7 +29,7 @@ PolkaFarm is a decentralized yield farming application built on Polkadot Asset H
 
 ## Demo Video
 
-[![PolkaFarm Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+[![PolkaFarm Feature Video](https://img.youtube.com/vi/nlOMTNsP_UU/0.jpg)](https://youtu.be/nlOMTNsP_UU)
 
 *Click the image above to watch the full demo video explaining PolkaFarm's architecture and features.*
 
