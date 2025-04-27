@@ -1,0 +1,33 @@
+{
+  "name": "polkafarm",
+  "version": "1.0.0",
+  "description": "DeFi yield farming on Polkadot Asset Hub",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "test:unit": "hardhat test test/unit/*",
+    "coverage": "hardhat coverage",
+    "build": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network assetHubWestend",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "frontend": "cd frontend && npm start"
+  },
+  "keywords": [
+    "polkadot",
+    "defi",
+    "yield-farming",
+    "solidity"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@openzeppelin/contracts": "^4.9.3",
+    "hardhat": "^2.17.1",
+    "solhint": "^3.4.1"
+  },
+  "dependencies": {
+    "ethers": "^6.13.7"
+  }
+}
