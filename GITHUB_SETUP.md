@@ -19,10 +19,10 @@ After creating the repository, GitHub will show instructions. Follow the "push a
 
 ```bash
 # Navigate to your project directory (if not already there)
-cd /Users/coledermott/polkafarm
+cd /somefilepath/polkafarm
 
 # Add the GitHub repository as a remote
-git remote add origin https://github.com/cdermott7/PolkaFarm.git
+git remote add origin https://github.com/YOUR_USERNAME/PolkaFarm.git
 
 # Ensure your branch is named 'main'
 git branch -M main
