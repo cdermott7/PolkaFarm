@@ -1,6 +1,39 @@
-# PolkaFarm: DeFi Yield Farming on Polkadot Asset Hub
+<div align="center">
+  <img src="./assets/screenshots/PolkadotLogo.png" alt="Polkadot Logo" width="400"/>
+  <h1>PolkaFarm: DeFi Yield Farming on Polkadot Asset Hub</h1>
+  <p><i>A secure, user-friendly yield farming DApp enabling WND staking with PLKF rewards</i></p>
+</div>
 
-PolkaFarm is a decentralized yield farming application built on Polkadot Asset Hub. It allows users to stake WND tokens (native token of Westend testnet) and earn PLKF reward tokens. This project demonstrates a DeFi primitive on Polkadot's new smart contract platform.
+<div align="center">
+  <img src="./assets/screenshots/CreatorFacePicture.jpg" alt="Creator" width="100" style="border-radius:50%;"/>
+  <p><b>Created by:</b> Cole Dermott</p>
+  <p><b>Team:</b> Waterloo Blockchain Sweat • <b>Contact:</b> <a href="mailto:cdermott@uwaterloo.ca">cdermott@uwaterloo.ca</a></p>
+</div>
+
+## Overview
+
+PolkaFarm is a decentralized yield farming application built on Polkadot Asset Hub. It allows users to stake WND tokens (native token of Westend testnet) and earn PLKF reward tokens. This project demonstrates a DeFi primitive on Polkadot's new smart contract platform, showcasing cross-chain capabilities, shared security, and scalability benefits.
+
+## Table of Contents
+- [Demo Video](#demo-video)
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Smart Contracts](#smart-contracts)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+- [How PolkaFarm Utilizes Polkadot's Asset Hub](#how-polkafarm-utilizes-polkadots-asset-hub)
+- [Known Issues and Workarounds](#known-issues-and-workarounds)
+- [Architecture](#architecture)
+- [Project Description](#polkafarm-project-description)
+- [License](#license)
+
+## Demo Video
+
+[![PolkaFarm Demo Video](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://youtu.be/YOUR_VIDEO_ID)
+
+*Click the image above to watch the full demo video explaining PolkaFarm's architecture and features.*
+
+> This comprehensive demo showcases how PolkaFarm leverages Polkadot Asset Hub's features for secure staking and reward distribution, with a walkthrough of the codebase and live demonstration.
 
 ## Features
 
@@ -10,10 +43,58 @@ PolkaFarm is a decentralized yield farming application built on Polkadot Asset H
 - Light and dark mode support for better user experience
 - Fully built on Polkadot Asset Hub using Solidity
 
+## Screenshots
+
+### Landing Page - Light Mode
+![PolkaFarm Landing Page Light Mode](./assets/screenshots/LightmodeLandingPage.png)
+*The welcoming landing page showcasing key statistics and features in light mode*
+
+### Landing Page - Dark Mode
+![PolkaFarm Landing Page Dark Mode](./assets/screenshots/DarkmodeLandingPage.png)
+*The same landing page in dark mode for comfortable nighttime use*
+
+### Dashboard Top - Light Mode
+![Dashboard Light Mode Top](./assets/screenshots/LightmodeDashboardTop.png)
+*Clean dashboard interface in light mode showing staking statistics*
+
+### Dashboard Bottom - Light Mode
+![Dashboard Light Mode Bottom](./assets/screenshots/LightmodeDashboardBottom.png)
+*Portfolio view and staking actions in light mode*
+
+### Dashboard Top - Dark Mode
+![Dashboard Dark Mode Top](./assets/screenshots/DarkmodeDashboardTop.png)
+*Dashboard interface in dark mode showing staking statistics*
+
+### Dashboard Bottom - Dark Mode
+![Dashboard Dark Mode Bottom](./assets/screenshots/DarkmodeDashboardBottom.png)
+*Portfolio view and staking actions in dark mode*
+
 ## Smart Contracts
 
 - `PolkaFarmToken.sol`: ERC-20 token for rewards (PLKF)
 - `PolkaFarmStaking.sol`: Staking contract that handles deposits, withdrawals, and reward distribution
+
+## Repository Structure
+
+```
+polkafarm/
+├── contracts/                 # Smart contract source code
+│   ├── PolkaFarmToken.sol     # PLKF reward token contract
+│   └── PolkaFarmStaking.sol   # WND staking and reward distribution
+├── frontend/                  # React-based frontend application
+│   ├── public/                # Static assets
+│   └── src/                   # Source code
+│       ├── App.js             # Main application component
+│       └── App.css            # Styling with dark mode support
+├── scripts/                   # Deployment scripts
+│   └── deploy.js              # Contract deployment logic
+├── assets/                    # Project assets
+│   └── screenshots/           # UI screenshots
+├── README.md                  # Project documentation (you are here)
+├── PROJECT_DESCRIPTION.md     # Detailed technical description
+├── HACKATHON_SUBMISSION.md    # Guide for hackathon submission
+└── hardhat.config.js          # Hardhat configuration for Asset Hub
+```
 
 ## Getting Started
 
@@ -27,7 +108,7 @@ PolkaFarm is a decentralized yield farming application built on Polkadot Asset H
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/polkafarm.git
+git clone https://github.com/cdermott7/PolkaFarm.git
 cd polkafarm
 ```
 
@@ -238,16 +319,59 @@ The early withdrawal penalty feature encourages users to keep their funds staked
 ### Canva Slides Detailing PolkaFarm
 - [Slides](https://www.canva.com/design/DAGl07wuLOQ/xmXWpNqKpS4aDNuEoREmpg/edit?utm_content=DAGl07wuLOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
-# PolkaFarm Project Description
+## How PolkaFarm Utilizes Polkadot's Asset Hub
 
-## Short Summary (150 chars)
+PolkaFarm demonstrates the power of Polkadot's Asset Hub through several key integrations:
+
+### 1. Native Token Integration
+
+We directly leverage the WND token (Westend's native token) for staking operations. This is possible because Asset Hub's EVM implementation allows smart contracts to interact with the chain's native token, unlike traditional EVM chains that require wrapped tokens.
+
+```solidity
+// Stake native WND tokens
+function stake() external payable {
+    require(msg.value > 0);
+    _u();
+    // ... staking logic
+}
+```
+
+### 2. Cross-Chain Compatibility
+
+Our architecture is designed with Polkadot's cross-consensus messaging (XCM) in mind. While currently deployed on Westend testnet, the same design allows for future parachain interactions:
+
+- Token rewards can be expanded to include tokens from other parachains
+- Liquidity can be sourced from multiple Polkadot ecosystem parachains
+- Governance mechanisms can be integrated with Polkadot's on-chain governance
+
+### 3. Security Through Shared Consensus
+
+By building on Asset Hub, PolkaFarm benefits from Polkadot's shared security model:
+
+- All transactions are validated by Polkadot's validator set
+- The application inherits Polkadot's robust security guarantees
+- Users benefit from the same security level as Polkadot's relay chain
+
+### 4. Scalability Benefits
+
+Polkadot Asset Hub's architecture provides scalability advantages:
+
+- Lower gas fees compared to standalone chains
+- Higher throughput for yield farming operations
+- Reduced confirmation times for staking and unstaking
+
+This implementation showcases how traditional DeFi primitives can be enhanced and made more efficient when built on Polkadot's specialized infrastructure.
+
+## PolkaFarm Project Description
+
+### Short Summary (150 chars)
 A secure, user-friendly yield farming DApp for Polkadot Asset Hub enabling WND staking with PLKF rewards and modern UI features.
 
-## Full Description
+### Full Description
 
 PolkaFarm addresses several key challenges in the DeFi space while leveraging Polkadot's unique capabilities:
 
-### Problems Solved
+#### Problems Solved
 
 1. **Accessibility Barrier**: Traditional DeFi platforms often have steep learning curves and complex UIs. PolkaFarm offers an intuitive, clean interface with dark mode support, making yield farming accessible to both beginners and experienced users.
 
@@ -257,7 +381,7 @@ PolkaFarm addresses several key challenges in the DeFi space while leveraging Po
 
 4. **Security Concerns**: PolkaFarm implements a secure, auditable smart contract architecture backed by Polkadot's shared security model, reducing the risk of exploits and hacks compared to standalone chains.
 
-### How Polkadot Was Used
+#### How Polkadot Was Used
 
 PolkaFarm leverages several key Polkadot features:
 
@@ -269,9 +393,9 @@ PolkaFarm leverages several key Polkadot features:
 
 4. **On-Chain Governance**: The project architecture is designed with future integration to Polkadot's on-chain governance system, enabling protocol upgrades and parameter adjustments through community voting.
 
-## Technical Description
+### Technical Description
 
-### SDKs and Technologies
+#### SDKs and Technologies
 
 1. **Smart Contract Development**:
    - Solidity 0.8.18+ for contract development
@@ -290,7 +414,7 @@ PolkaFarm leverages several key Polkadot features:
    - Custom network configuration in MetaMask for seamless user onboarding
    - RPC endpoints via westend-asset-hub-eth-rpc.polkadot.io
 
-### Unique Polkadot Features Utilized
+#### Unique Polkadot Features Utilized
 
 1. **EVM on Substrate**: Polkadot Asset Hub provides an EVM environment built on Substrate, enabling us to deploy familiar Solidity contracts while benefiting from Polkadot's consensus and interoperability features.
 
