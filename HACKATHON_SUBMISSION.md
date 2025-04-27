@@ -9,7 +9,7 @@ This document contains information to help you complete your hackathon submissio
 
 ## Key Links
 
-- **GitHub Repository:** https://github.com/YOUR_USERNAME/polkafarm
+- **GitHub Repository:** https://github.com/cdermott7/PolkaFarm
 - **Demo Video:** [Link to your demo video]
 - **Deployed Frontend:** [If you have deployed the frontend, add the link here]
 

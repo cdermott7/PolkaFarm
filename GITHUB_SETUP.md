@@ -22,7 +22,10 @@ After creating the repository, GitHub will show instructions. Follow the "push a
 cd /Users/coledermott/polkafarm
 
 # Add the GitHub repository as a remote
-git remote add origin https://github.com/YOUR_USERNAME/polkafarm.git
+git remote add origin https://github.com/cdermott7/PolkaFarm.git
+
+# Ensure your branch is named 'main'
+git branch -M main
 
 # Push your local repository to GitHub
 git push -u origin main
