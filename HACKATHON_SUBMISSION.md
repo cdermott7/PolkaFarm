@@ -1,6 +1,4 @@
-# PolkaFarm Hackathon Submission Guide
-
-This document contains information to help you complete your hackathon submission.
+# PolkaFarm Hackathon Submission Information
 
 ## Project Overview
 
@@ -58,9 +56,9 @@ This document contains information to help you complete your hackathon submissio
 
 ## Team Information
 
-- **Team Name:** [Your Team Name]
-- **Team Members:** [List of team members and their roles]
-- **Contact Email:** [Your contact email]
+- **Team Name:** [Waterloo Blockchain Sweat]
+- **Team Members:** [Cole Dermott - Head of Finance @ Waterloo Blockchain]
+- **Contact Email:** [cdermott@uwaterloo.ca]
 
 ## Additional Information
 
