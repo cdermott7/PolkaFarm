@@ -235,6 +235,9 @@ The contracts are deployed on the Polkadot Asset Hub Westend testnet:
 
 The early withdrawal penalty feature encourages users to keep their funds staked longer, creating more stability in the protocol.
 
+### Canva Slides Detailing PolkaFarm
+- [Slides](https://www.canva.com/design/DAGl07wuLOQ/xmXWpNqKpS4aDNuEoREmpg/edit?utm_content=DAGl07wuLOQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
